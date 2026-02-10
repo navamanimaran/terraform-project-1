@@ -12,9 +12,10 @@ variable "instance_count" {
 }
 variable "ami_id" {
   type    = string
-  default = "ami-0c7217cdde317cfec"
+  default = "ami-04144e1d88f3aa3a0"
 }
 variable "instance_type" {
   type    = string
-  default = "t2.large"
+  default = "t4g.small"
 }
+
