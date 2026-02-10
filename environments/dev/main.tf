@@ -42,7 +42,7 @@ module "vpc" {
   vpc_cidr          = var.vpc_cidr
   subnet_cidr       = cidrsubnet(var.vpc_cidr, 8, 1)
   availability_zone = "${var.aws_region}a"
-  environment       = production
+  environment       = "production"
 }
 module "ec2" {
   source            = "../../modules/ec2"
@@ -51,5 +51,5 @@ module "ec2" {
   instance_type     = var.instance_type
   subnet_id         = module.vpc.subnet_id
   security_group_id = aws_security_group.allow_ssh_http.id
-  environment       = production
+  environment       = "production"
 }
