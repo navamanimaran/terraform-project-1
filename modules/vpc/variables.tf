@@ -9,7 +9,7 @@ variable "subnet_cidr" {
 variable "availability_zone" {
   type        = string
   description = "Availability zone for the subnet"
-  default     = "us-west-1a"
+  default     = "us-east-1a"
 }
 variable "environment" {
   type        = string
